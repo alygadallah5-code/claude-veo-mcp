@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: claude-veo-mcp
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: VEO_MODEL
+        value: veo-3.1-generate-preview
